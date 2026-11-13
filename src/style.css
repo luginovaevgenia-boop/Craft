@@ -57,3 +57,6 @@ a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;cursor:po
 h2,.founder-copy h2,.final-inner h2,dialog h2{line-height:.9}
 h3,.activity-grid h3,.event h3,.price-card h3{line-height:1.02}
 .green-note p,.meeting-count{line-height:1.02}
+
+/* Use the same reading style for activity descriptions and their explanatory note. */
+.activities .activity-grid article>p,.activities .format-note{font-family:var(--sans);font-size:18px;font-weight:400;font-style:normal;line-height:1.75;color:var(--ink)}
