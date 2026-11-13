@@ -43,3 +43,11 @@ a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;cursor:po
  .price-card{padding:25px 20px}
  .price-card .button{font-size:16px;padding-inline:17px;gap:8px}
 }
+
+/* Brand mark and prominent sales opening date. */
+.brand svg{width:30px;height:58px;color:#f2384f}
+.start-date,.launch.start-date,.pricing-notes .start-date{font-size:22px;font-weight:800;color:#c92e38;line-height:1.4;letter-spacing:0}
+.launch.start-date{margin-top:20px}
+.pricing-notes{align-items:center}
+.dialog-note .start-date{display:inline-block;font-size:20px;margin-bottom:10px}
+@media(max-width:1000px){.brand svg{width:25px;height:49px}.start-date,.launch.start-date,.pricing-notes .start-date{font-size:21px}.pricing-notes .start-date{margin-top:16px}}
