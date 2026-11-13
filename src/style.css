@@ -60,3 +60,17 @@ h3,.activity-grid h3,.event h3,.price-card h3{line-height:1.02}
 
 /* Use the same reading style for activity descriptions and their explanatory note. */
 .activities .activity-grid article>p,.activities .format-note{font-family:var(--sans);font-size:18px;font-weight:400;font-style:normal;line-height:1.75;color:var(--ink)}
+
+/* Consistent body copy throughout all sections and supporting notes. */
+.hero-description,.about-text,.about-text p,.people-intro>p:last-of-type,
+.heading-note,.activities .activity-grid article>p,.activities .format-note,
+.event p,.event-footnote,.price-card ul,.pricing-notes,
+.founder-lead,.founder-copy>p:not(.section-label),.faq-list summary,.faq-answer,
+.meaning-note>p:last-of-type,.final-inner>p:not(.eyebrow),
+.contact-placeholder,.contact-placeholder small,.footer-bottom,
+#selected-plan,.dialog-note,dialog>p:not(.eyebrow):not(#selected-plan),blockquote small{
+ font-family:var(--sans);font-size:18px;font-weight:400;font-style:normal;line-height:1.75;color:var(--ink)
+}
+.price-card li{line-height:1.75}
+.mastermind ul{color:inherit}
+.pricing-notes .start-date,.dialog-note .start-date{color:#c92e38;font-weight:800}
