@@ -29,7 +29,7 @@ a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;cursor:po
  .date span{font-size:12px;letter-spacing:0}
  .intro-strip{align-items:flex-start;gap:18px}.intro-strip figure{width:95px}
  .intro-strip>div>p:last-child{font-size:26px;line-height:1.2}
- .founder-copy br{display:none}
+ .founder-copy>p br{display:none}
  .price-card .button,.final-inner .button{font-size:17px;gap:12px;padding-inline:20px}
  .price-card{padding:27px 24px}.price-top{gap:14px}
  .people-flower{display:none}
@@ -102,3 +102,16 @@ h3,.activity-grid h3,.event h3,.price-card h3{line-height:1.02}
  .button,.price-card .button,.final-inner .button{font-size:18px;gap:12px}
 }
 @media(max-width:360px){.header .brand small{max-width:200px}.price-card .button{padding-inline:15px}}
+
+/* Keep the founder section inside the viewport with an explicit two-line name. */
+.founder-inner{grid-template-columns:minmax(0,.9fr) minmax(0,1fr)}
+.founder-photo,.founder-copy{min-width:0;max-width:100%}
+.founder-copy h2 br{display:none}
+.founder-copy h2 em{display:block;padding-left:0}
+.founder-copy p,.founder-copy blockquote{overflow-wrap:break-word}
+@media(max-width:1000px){
+ .founder-inner{grid-template-columns:minmax(0,1fr)}
+ .founder-copy h2{font-size:clamp(48px,15vw,78px);line-height:.94}
+ .founder-copy h2 em{padding-left:0}
+ .founder-photo{transform:none}
+}
