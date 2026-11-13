@@ -51,3 +51,9 @@ a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;cursor:po
 .pricing-notes{align-items:center}
 .dialog-note .start-date{display:inline-block;font-size:20px;margin-bottom:10px}
 @media(max-width:1000px){.brand svg{width:25px;height:49px}.start-date,.launch.start-date,.pricing-notes .start-date{font-size:21px}.pricing-notes .start-date{margin-top:16px}}
+
+/* Compact multiline headings at every screen size. */
+.hero h1{line-height:.86}
+h2,.founder-copy h2,.final-inner h2,dialog h2{line-height:.9}
+h3,.activity-grid h3,.event h3,.price-card h3{line-height:1.02}
+.green-note p,.meeting-count{line-height:1.02}
