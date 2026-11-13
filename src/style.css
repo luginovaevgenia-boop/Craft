@@ -115,3 +115,8 @@ h3,.activity-grid h3,.event h3,.price-card h3{line-height:1.02}
  .founder-copy h2 em{padding-left:0}
  .founder-photo{transform:none}
 }
+
+/* The same brand flower in both tariff corners. */
+.price-top{align-items:flex-start}
+.price-top svg{width:30px;height:60px}
+@media(max-width:1000px){.price-top svg{width:27px;height:54px}}
