@@ -437,3 +437,11 @@ dialog .dark{background:#69489b}
 }
 @media(max-width:360px){.hero.wrap{padding-inline:16px}.hero h1{font-size:35px}.hero h1 em{font-size:56px}.calendar-card h3{font-size:24px}}
 @media(prefers-reduced-motion:reduce){.cover-object img{animation:none!important}}
+
+/* Approved spacing between the founder biography section and FAQ. */
+.founder{padding-bottom:40px}
+.founder + .faq{padding-top:40px}
+@media(max-width:1000px){
+ .founder{padding-bottom:32px}
+ .founder + .faq{padding-top:32px}
+}
