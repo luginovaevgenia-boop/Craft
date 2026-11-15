@@ -27,3 +27,28 @@ dialog.addEventListener('click', event => {
   if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
 });
 dialog.addEventListener('close', () => document.body.classList.remove('modal-open'));
+
+// Optional reveal motion is progressive: content remains visible without JavaScript.
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+if (!reduceMotion.matches && 'IntersectionObserver' in window) {
+  const targets = document.querySelectorAll('.section-heading, .about-top, .about-bottom, .people-intro, .people-tags, .activity-grid article, .event, .price-card, .founder-photo, .founder-copy, .faq-intro, .faq-list, .final-inner');
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  targets.forEach(target => {
+    target.classList.add('reveal-item');
+    revealObserver.observe(target);
+  });
+  document.documentElement.classList.add('motion-ready');
+  const revealAll = () => {
+    targets.forEach(target => target.classList.add('is-visible'));
+    revealObserver.disconnect();
+  };
+  reduceMotion.addEventListener('change', event => { if (event.matches) revealAll(); });
+  window.addEventListener('beforeprint', revealAll);
+}
